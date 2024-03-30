@@ -1,0 +1,30 @@
+import numpy as np
+from PIL import Image
+import os
+
+def load_images_from_folder(folder):
+    images = []
+    for filename in os.listdir(folder):
+        img_path = os.path.join(folder, filename)
+        if os.path.isfile(img_path):
+            img = Image.open(img_path)
+            img = img.resize((width, height))  # Resize images to a consistent size if needed
+            img_array = np.array(img)  # Convert image to numpy array
+            images.append(img_array)
+    return images
+
+# Specify the folder containing your images
+folder_path = '"D:\Corset-Attachment-Files\Image\PIL.jpg"'
+
+# Adjust these values according to your image dimensions
+width = 128
+height = 128
+
+# Load images from the specified folder
+images = load_images_from_folder("D:\Corset-Attachment-Files\Image\PIL.jpg")
+
+# Convert the list of image arrays to a single numpy array
+X = np.array(images)
+
+# Now X contains your image data represented as a numpy array
+# You can use X as input to the coreset_construction function
