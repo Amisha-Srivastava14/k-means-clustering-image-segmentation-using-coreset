@@ -1,5 +1,5 @@
 # k-means-clustering-image-segmentation-using-coreset
-# image-segmentation-by-team-yuktika
+# image-segmentation
 The provided Python files serve as a framework for implementing coreset construction algorithms and evaluating their performance:
 pip install numpy opencv-python scikit-learn scipy matplotlib streamlit
 
